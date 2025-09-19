@@ -1,0 +1,30 @@
+<!-- Room Status -->
+<!-- <div class="room-status" [ngClass]="roomStatus()">
+  <h2>Meeting Room is: {{ roomStatus() | uppercase }}</h2>
+  <p *ngIf="currentMeeting()">Ongoing Meeting: {{ currentMeeting()?.name }}</p>
+</div> -->
+
+<!-- Message -->
+<div class="message" *ngIf="message()">
+  <p>{{ message() }}</p>
+</div>
+
+<!-- All Bookings -->
+<h3>All Bookings ({{ bookings().length }})</h3>
+
+<ul>
+  <li *ngFor="let booking of bookings(); trackBy: trackById">
+    <strong>{{ booking.name }}</strong>  {{ booking.date | date}} ({{ booking.timeSlot}})
+    <button (click)="onStartMeeting(booking.id)" [disabled]="roomStatus() === 'busy'">
+      Start
+    </button>
+    <button (click)="onCancelBooking(booking.id)">
+      Cancel
+    </button>
+  </li>
+</ul>
+
+<!-- Controls for ongoing meeting -->
+<div class="controls" *ngIf="roomStatus() === 'busy'">
+  <button (click)="onEndMeeting()">End Current Meeting</button>
+</div>

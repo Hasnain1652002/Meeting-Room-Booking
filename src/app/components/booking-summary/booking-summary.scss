@@ -1,0 +1,54 @@
+/* booking-summary.scss */
+
+.summary-card {
+  background: #1f1f1f;
+  color: #eaeaea;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
+  max-width: 350px;
+  margin: 1rem auto;
+  font-size: 0.95rem;
+  line-height: 1.5;
+
+  h2 {
+    font-size: 1.3rem;
+    color: var(--accent);
+    margin-bottom: 1rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  p {
+    margin: 0.5rem 0;
+
+    strong {
+      color: #fff;
+    }
+  }
+
+  .status-line {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    .status-indicator {
+      display: inline-block;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+
+      &.free {
+        background: #28a745;
+        box-shadow: 0 0 6px #28a745;
+      }
+
+      &.busy {
+        background: #dc3545;
+        box-shadow: 0 0 6px #dc3545;
+      }
+    }
+  }
+}

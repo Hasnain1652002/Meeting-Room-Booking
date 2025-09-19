@@ -1,0 +1,24 @@
+<div class="summary-card">
+  <h2>📊 Booking Summary</h2>
+
+  <p><strong>Total Bookings:</strong> {{ totalBookings }}</p>
+
+  <!-- Room Status with colored indicator -->
+  <p class="status-line">
+    <strong>Room Status:</strong>
+    <span 
+      class="status-indicator" 
+      [ngClass]="roomStatus === 'free' ? 'free' : 'busy'">
+    </span>
+    {{ roomStatus | uppercase }}
+  </p>
+
+  <p *ngIf="currentMeeting">
+    <strong>Ongoing Meeting:</strong> {{ currentMeeting.name }} ({{ currentMeeting.timeSlot }})
+  </p>
+  <p *ngIf="!currentMeeting">
+    <strong>Ongoing Meeting:</strong> None
+  </p>
+
+  <!-- <p><strong>Next Available Slot:</strong> {{ nextAvailableSlot }}</p> -->
+</div>

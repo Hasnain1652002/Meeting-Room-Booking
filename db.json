@@ -1,0 +1,32 @@
+{
+  "bookings": [
+    {
+      "id": "mfpdtkqppf0xfu",
+      "name": "anesh",
+      "date": "2025-09-18",
+      "timeSlot": "13:00-14:00",
+      "createdAt": "2025-09-18T12:23:34.465Z"
+    },
+    {
+      "id": "mfpdu2j5l5ykh6",
+      "name": "saad",
+      "date": "2025-09-18",
+      "timeSlot": "15:00-16:00",
+      "createdAt": "2025-09-18T12:23:57.521Z"
+    },
+    {
+      "id": "mfqg3lkwz3w9g0",
+      "name": "Hasnain",
+      "date": "2025-09-19",
+      "timeSlot": "14:00-15:00",
+      "createdAt": "2025-09-19T06:15:07.520Z"
+    },
+    {
+      "id": "mfqky408tk0sde",
+      "name": "hasnain shabir",
+      "date": "2025-09-19",
+      "timeSlot": "15:00-16:00",
+      "createdAt": "2025-09-19T08:30:49.544Z"
+    }
+  ]
+}

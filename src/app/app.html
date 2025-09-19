@@ -1,0 +1,9 @@
+<nav class="navbar">
+  <h1>{{ title }}</h1>
+  <div class="nav-links">
+    <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a>
+    <a routerLink="/book-meeting" routerLinkActive="active">Book Meeting</a>
+  </div>
+</nav>
+
+<router-outlet></router-outlet>

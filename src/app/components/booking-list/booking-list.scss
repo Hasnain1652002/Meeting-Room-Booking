@@ -1,0 +1,105 @@
+/* booking-list.scss */
+
+h3 {
+  margin: 1.5rem 0 1rem;
+  color: var(--accent);
+  font-size: 1.3rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.message {
+  background: #2a2a2a;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: 500;
+  color: var(--accent);
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  li {
+    background: #1f1f1f;
+    margin-bottom: 0.8rem;
+    padding: 1rem;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.35);
+
+    strong {
+      color: #fff;
+      font-weight: 600;
+    }
+
+    span {
+      color: #bbb;
+      margin-left: 0.5rem;
+    }
+
+    button {
+      margin-left: 0.6rem;
+      padding: 0.4rem 0.9rem;
+      border: none;
+      border-radius: 6px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background var(--transition), transform var(--transition);
+
+      &:hover {
+        transform: translateY(-2px);
+      }
+
+      &:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+      }
+
+      &:first-of-type {
+        background: #28a745; // Start = Green
+        color: #fff;
+
+        &:hover {
+          background: #218838;
+        }
+      }
+
+      &:last-of-type {
+        background: #dc3545; // Cancel = Red
+        color: #fff;
+
+        &:hover {
+          background: #c82333;
+        }
+      }
+    }
+  }
+}
+
+.controls {
+  text-align: center;
+  margin-top: 1.5rem;
+
+  button {
+    background: #ff9800;
+    color: #fff;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background var(--transition), transform var(--transition);
+
+    &:hover {
+      background: #e68900;
+      transform: translateY(-2px);
+    }
+  }
+}

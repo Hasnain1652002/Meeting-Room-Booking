@@ -1,0 +1,43 @@
+<div class="card">
+  <h3>Book Meeting Room</h3>
+
+  <form [formGroup]="form" (ngSubmit)="submit()">
+    <!-- Name -->
+    <label>
+      Name
+      <input type="text" formControlName="name" />
+    </label>
+    <div class="error" *ngIf="form.get('name')?.touched && form.get('name')?.invalid">
+      Name is required.
+    </div>
+
+    <!-- Date -->
+    <label>
+      Date
+      <input type="date" formControlName="date" />
+    </label>
+    <div class="error" *ngIf="form.get('date')?.touched && form.get('date')?.invalid">
+      Date is required.
+    </div>
+
+    <!-- Time Slot -->
+    <label>
+      Time slot
+      <select formControlName="timeSlot">
+        <option *ngFor="let ts of timeSlots" [value]="ts">{{ ts }}</option>
+      </select>
+    </label>
+
+    <!-- Submit -->
+    <div class="actions">
+      <button type="submit" [disabled]="form.invalid">
+        Book Now
+      </button>
+    </div>
+
+    <!-- Feedback message -->
+    <div *ngIf="bookingService.message() as msg" class="msg">
+      {{ msg }}
+    </div>
+  </form>
+</div>
